@@ -25,6 +25,8 @@ body {
 	background-color: #fff;
 	position: fixed;
 	top: 0;
+	left: 0;
+	z-index: 100;
 }
 
 .header-inner {
@@ -34,13 +36,12 @@ body {
 }
 
 .header-inner i {
-	font-size: 50px;
+	font-size: 40px;
 }
 
 .header-inner a {
-	align-items: center;
+	align-items: start;
 	background-color: #74cfae;
-	box-sizing: border-box;
 	color: #fff;
 	display: flex;
 	font-size: 12px;
@@ -56,13 +57,19 @@ body {
 }
 
 /* Main */
+.main {
+	padding-top: 70px;
+}
+
 .title {
 	background-color: #f2f2f2;
+	width: 100%;
 }
 
 .title-inner {
 	text-align: center;
-	margin: 250px auto;
+	padding-top: 250px;
+	padding-bottom: 250px;
 }
 
 .title-inner h1{
@@ -111,8 +118,9 @@ body {
 }
 
 /* ------------------------- */
-.works .page-title {
+.works-inner {
 	padding-top: 60px;
+	padding-bottom: 70px;
 }
 
 .works__img {
@@ -121,24 +129,23 @@ body {
 	margin-top: 40px;
 }
 
-.works__img img {
-	margin: 0 100px 80px 0;
+.works__img li {
+	margin-left: 100px;
 	opacity: 0.7;
 	transition-duration: .3s;
 }
 
-.works__img img:hover {
-	cursor: pointer;
+.works__img li:hover {
 	opacity: 1.0;
 	transition-duration: .3s;
 }
 
-.works__img img:nth-child(3n) {
-	margin-right: 0;
+.works__img li:nth-child(3n+1) {
+	margin-left: 0;
 }
 
-.works__img img:nth-child(4+n) {
-	margin-bottom: 0;
+.works__img li:nth-child(n+4) {
+	margin-top: 80px;
 }
 
 .works__text {
@@ -147,7 +154,6 @@ body {
 	justify-content: center;
 	line-height: 1.5;
 	margin-top: 90px;
-	padding-bottom: 70px;
 	width: 1100px;
 }
 
@@ -166,6 +172,7 @@ body {
 	margin-left: 90px;
 	padding: 14px 20px;
 	text-decoration: none;
+	transition-duration: .3s;
 }
 
 .works__text a:hover {
@@ -179,8 +186,9 @@ body {
 	color: #fff;
 }
 
-.skills .page-title {
+.skills-inner {
 	padding-top: 70px;
+	padding-bottom: 100px;
 }
 
 .skills__content {
@@ -188,7 +196,6 @@ body {
 	font-size: 16px;
 	justify-content: center;
 	margin-top: 70px;
-	padding-bottom: 100px;
 }
 
 .skills__parts {
@@ -199,8 +206,8 @@ body {
 	margin-left: 0;
 }
 
-.skills__parts h1 {
-	padding-top: 20px;
+.skills__parts figcaption {
+	margin-top: 20px;
 }
 
 /* ------------------------- */
@@ -208,15 +215,16 @@ body {
 	align-items: center;
 	display: flex;
 	justify-content: center;
+	padding-top: 200px;
+	padding-bottom: 200px;
 }
 
 .sns-inner i {
 	box-sizing: border-box;
 	color: #74cfae;
 	font-size: 60px;
-	margin-top: 200px;
-	margin-bottom: 200px;
 	padding: 50px;
+	transition-duration: .3s;
 	width: 185px;
 }
 
