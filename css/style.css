@@ -1,6 +1,7 @@
 body {
 	color: #333;
-	background-color: #f2f2f2;font-family: 'Lato', sans-serif;
+	background-color: #f2f2f2;
+	font-family: 'Lato', sans-serif;
 }
 
 .page-title {
@@ -107,7 +108,7 @@ body {
 	width: 680px;
 }
 
-.content__text h1 {
+.content__text h2 {
 	font-size: 24px;
 }
 
@@ -219,6 +220,14 @@ body {
 	padding-bottom: 200px;
 }
 
+.sns-inner li {
+	display: inline-block;
+}
+
+.sns-inner li a {
+	display: block;
+}
+
 .sns-inner i {
 	box-sizing: border-box;
 	color: #74cfae;
@@ -227,6 +236,7 @@ body {
 	transition-duration: .3s;
 	width: 185px;
 }
+
 
 .sns-inner i:hover {
 	transition-duration: .3s;
