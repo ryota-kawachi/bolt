@@ -30,16 +30,24 @@ img {
 }
 
 .hamburger {
-	padding: 10px;
-	border: 1px solid #ddd;
+	padding: 20px;
+	border: 2px solid #ddd;
 	border-radius: 4px;
+	position: relative;
 }
 
 .hamburger__parts {
-	background-color: #333;
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	background-color:#ddd;
 	height: 2px;
-	margin-top: 7px;
+	margin-top: 10px;
 	width: 30px;
+}
+
+.hamburger__parts:nth-child(3) {
+	margin-top: 20px;
 }
 
 .hamburger__parts:first-child {
@@ -98,8 +106,7 @@ img {
 
 .title-inner {
 	text-align: center;
-	padding-top: 250px;
-	padding-bottom: 250px;
+	padding: 250px 0 250px 0;
 }
 
 .title-inner h1{
@@ -145,8 +152,7 @@ img {
 
 /* ------------------------- */
 .works-inner {
-	padding-top: 60px;
-	padding-bottom: 70px;
+	padding: 60px 0 70px 0;
 }
 
 .works__img {
@@ -212,8 +218,7 @@ img {
 }
 
 .skills-inner {
-	padding-top: 70px;
-	padding-bottom: 100px;
+	padding: 70px 0 100px 0;
 }
 
 .skills__content {
@@ -240,8 +245,7 @@ img {
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	padding-top: 200px;
-	padding-bottom: 200px;
+	padding: 200px 0;
 }
 
 .sns-inner i {
@@ -254,7 +258,7 @@ img {
 }
 
 
-.sns-inner i:hover {
+.link__parts:hover {
 	transition-duration: .3s;
 	background-color: #fff;
 }
@@ -267,20 +271,18 @@ img {
 .footer-inner {
 	color: #fff;
 	text-align: end;
-	padding-top: 20px;
-	padding-bottom: 25px;
+	padding: 20px 0 25px 0;
 }
 
 /* -------------メディアクエリー------------ */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
 	.inner {
 		width: 97%;
 	}
 
 	.content-inner {
 		display: block;
-		padding-top: 50px;
-		padding-bottom: 25px;
+		padding: 50px 0 25px 0;
 		text-align: center;
 	}
 
@@ -291,24 +293,27 @@ img {
 
 	.content__text h2 {
 		margin-top: 20px;
-		margin-bottom: 35px;
 	}
 
 	.works__img {
 		flex-direction: column;
 		flex-wrap: nowrap;
 	}
-
+	
 	.works__img li {
 		margin: 0;
 	}
-
+	
 	.works__img li:nth-child(n+4) {
 		margin-top: 0px;
 	}
 
-	.works__img li:nth-child(4) {
+	.works__img li:nth-child(3n+1) {
 		margin-top: 80px;
+	}
+	
+	.works__img li:nth-child(1) {
+		margin-top: 0;
 	}
 
 	.works__text {
@@ -351,16 +356,11 @@ img {
 	}
 
 	.title-inner {
-		padding-top: 160px;
-		padding-bottom: 130px;
+		padding: 160px 0 130px 0;
 	}
 
 	.title-inner h1 {
 		font-size: 80px;
-	}
-
-	.title-inner p {
-		font-size: 30px;
 	}
 
 	.content__text {
@@ -369,10 +369,7 @@ img {
 
 	.sns-inner {
 		flex-direction: column;
-		flex-wrap: nowrap;
-		padding-top: 50px;
-		padding-bottom: 50px;
-		width: 100%;
+		padding: 50px 0;
 	}
 
 	.sns-inner .link {
@@ -382,9 +379,5 @@ img {
 
 	.sns-inner .link__parts {
 		display: block;
-	}
-
-	.sns-inner i {
-		width: 100%;
 	}
 }
